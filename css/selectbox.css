@@ -1,0 +1,100 @@
+/**SELECT**/
+.selectbox {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    min-width: 150px;
+}
+.selectbox .select {
+    display: block;
+    /*width: 100%;*/
+    height: 100%;
+}
+.selectbox .select .text {
+    display: block;
+    color: #141414;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 10px 30px 10px 10px;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.selectbox .trigger {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 24px;
+    height: 100%;
+    background: url(../images/select.png) no-repeat center 14px;
+    cursor: pointer;
+}
+.selectbox:hover .trigger {
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+.selectbox.active .trigger {
+    background: url(../images/select.png) no-repeat center -79px;
+}
+.selectbox.active {
+    
+}
+/*.selectbox:hover .trigger {
+    background-position: left -34px;
+}*/
+.selectbox .dropdown {
+    top: 34px; 
+    left: -10px;
+    right: -10px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    max-height: 225px;
+    background: #ffffff;
+}
+.selectbox .dropdown.topSelect {
+    
+}
+.selectbox .dropdown ul {
+   /* margin-left: -11px;
+    margin-right: -10px;*/
+}
+.selectbox .dropdown ul li {
+   text-decoration: none !important;
+}
+.selectbox li {
+    padding: 15px 0;
+    
+}
+.selectbox ul > li{
+    color: #2d2d2d;
+    font-size: 13px;
+    line-height: 14px;
+    background: #e2e2e2;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+    text-transform: uppercase;
+    border-top: 1px solid #ffffff;
+}
+.selectbox li.selected {
+    background: #d3d3d3;
+    color: #2d2d2d!important;
+}
+.selectbox li:hover {
+    background: #F5F5F5;
+    color: #2d2d2d!important;
+}
+.selectbox li.disabled {
+    color: #AAA;
+}
+.selectbox li.disabled:hover {
+    background: none;
+}
